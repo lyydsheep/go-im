@@ -33,3 +33,18 @@
 
 ## 消息流程与传递
 ![img.png](images/img.png)
+
+## 表结构
+```sql
+create table user
+(
+    id           bigint auto_increment
+        primary key,
+    username     char(20)                           not null,
+    password     varchar(128)                       not null,
+    gmt_create   datetime default current_timestamp not null,
+    gmt_modified datetime default current_timestamp not null on update current_timestamp
+);
+
+
+```
